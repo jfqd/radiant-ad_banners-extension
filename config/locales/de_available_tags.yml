@@ -1,0 +1,13 @@
+---
+de:
+  desc: 
+    ad_banner: "Anzeige Auswählen.
+    Eine spezielle Anzeige kann durch das Attribut @name@ ausgewählt werden,
+    andernsfalls wird eine zufällige Anzeige ausgewählt.
+    
+    Eine Anzeige wird nur einmal auf einer Seite erscheinen, es sei den
+    sie wird mit dem Attribut @name@ versehen.
+
+    *Verwendung:*
+    
+    <pre><code><r:ad_banner [name=\"banner_name\"] [format=\"wide|short\"]/></code></pre>"

@@ -1,0 +1,47 @@
+---
+de:
+  activerecord:
+    errors:
+      models:
+        ad_banner:
+          attributes:
+            link_url:
+              invalid: 'Dies ist keine gültige URL'
+  ad_banner_upload: 'Upload'
+  ad_banner_bucket: 'Zwischenspeicher'
+  ad_banner_bucket_note: 'Der Zwischenspeicher bietet einen temporäre Aufbewahrung Bilder'
+  ad_banner_bucket_clear: 'Zwischenspeicher leeren'
+  ad_banner_attach_title: 'Zur Anzeige hinzufügen'
+  ad_banner_bucket_empty: 'Ihr Zwischenspeicher ist leer'
+  ad_banner_missing: 'FEHLT'
+  ad_banner_index_title: 'Anzeigen'
+  ad_banner_index_instructions: 'Wählen Sie eine Anzeige aus zum Bearbeiten oder <code>Entfernen</code> zum Löschen'
+  ad_banner_form:
+    instructions:
+      change: 'Fügen Sie der Anzeige ein Bild mit Drag und Drop hinzu'
+      disable: 'Sie können einen Anzeige temporär ausblenen, indem Sie das Gewicht auf <b>0</b> einstellen.'
+    label:
+      name: 'Anzeigen Name'
+      thumbnail: 'Anzeigen Vorschau'
+      drag: 'Ziehen Sie ein Bild von der Zwischenablage hierher'
+      url: 'Link URL'
+      weight: 'Gewischt'
+      format: 'Format'
+      weight_note: '(Je größer das Gewicht ist, desdo eher erscheint die Anzeige.)'
+      target: 'Ziel Fenster'
+    targets:
+      default: 'Browser-Voreinstellung'
+      new: 'Neues Browser-Fenster'
+      same: 'Gleiches Browser-Fenster'
+  ad_banner_index_column:
+    name: 'Name'
+    image: 'Bild Vorschau'
+    weight: 'Gewicht'
+    url: 'URL'
+  ad_banner_index_none: 'Keine Anzeigen'
+  ad_banner_action:
+    delete: 'Anzeige entfernen'
+    edit: 'Anzeige bearbeiten'
+    new: 'Neue Anzeige'
+    remove: 'Anzeige löschen'
+    remove_confirm: 'Sind Sie sicher, dass die Anzeige <strong class="warning">unwiderbringlich gelöscht</strong> wird?'
