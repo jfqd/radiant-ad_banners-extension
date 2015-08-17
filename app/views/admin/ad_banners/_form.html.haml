@@ -34,9 +34,17 @@
               = t('ad_banner_form.label.weight_note')
           = f.select :weight, (min_weight..10).to_a
         %p.title
+          %label{:for => 'format'}
+            = t('ad_banner_form.label.format')
+          = f.select :format, ['wide','short']
+        %p.title
           %label{:for => 'ad_banner_link_target'}
             = t('ad_banner_form.label.target')
           = f.select :link_target, [ [ t('ad_banner_form.targets.default'), '' ], [ t('ad_banner_form.targets.new'), '_blank' ], [ t('ad_banner_form.targets.same'), '_top' ] ]
+        %p.title
+          %label{:for => 'ad_banner_description'}
+            = t('description')
+          = f.text_area "description", :class => 'textarea'
   = javascript_tag "$('ad_banner_name').activate()"
   %p.buttons
     = save_model_button(@ad_banner)

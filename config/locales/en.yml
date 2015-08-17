@@ -26,6 +26,7 @@ en:
       drag: 'Drag an image from the assets bucket to here'
       url: 'Link URL'
       weight: 'Weight'
+      format: 'Format'
       weight_note: '(The greater the weight, the more likely the ad banner is to appear.)'
       target: 'Target Window'
     targets:

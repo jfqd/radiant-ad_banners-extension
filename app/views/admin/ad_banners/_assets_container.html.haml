@@ -16,13 +16,13 @@
   #assets 
     #bucket.pane
       - render_region :bucket_pane do |bucket_pane|
-        - bucket_pane.bucket_notes do      
+        - bucket_pane.bucket_notes do
           %p
             %span.note
               = t('ad_banner_bucket_note')
             %span#clear-bucket
               = link_to_remote(t('ad_banner_bucket_clear'), {:url => clear_bucket_url} )
-        - bucket_pane.bucket do 
+        - bucket_pane.bucket do
           = render :partial => "bucket"
-        - bucket_pane.bucket_bottom do 
+        - bucket_pane.bucket_bottom do
           .clear
