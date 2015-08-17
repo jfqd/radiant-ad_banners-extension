@@ -1,5 +1,6 @@
 ---
 de:
+  ads: Anzeigen
   activerecord:
     errors:
       models:
@@ -25,7 +26,7 @@ de:
       thumbnail: 'Anzeigen Vorschau'
       drag: 'Ziehen Sie ein Bild von der Zwischenablage hierher'
       url: 'Link URL'
-      weight: 'Gewischt'
+      weight: 'Gewicht'
       format: 'Format'
       weight_note: '(Je größer das Gewicht ist, desdo eher erscheint die Anzeige.)'
       target: 'Ziel Fenster'

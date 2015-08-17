@@ -1,5 +1,6 @@
 ---
 en:
+  ads: Ads
   activerecord:
     errors:
       models:

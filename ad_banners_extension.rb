@@ -10,7 +10,7 @@ class AdBannersExtension < Radiant::Extension
     admin.ad_banner = Radiant::AdminUI.load_default_ad_banner_regions
 
     tab "Content" do
-      add_item "Ads", "/admin/ad_banners", :after => "Pages"
+      add_item "ads", "/admin/ad_banners", :after => "Pages"
     end
     Page.send :include, AdBannerTags
   end

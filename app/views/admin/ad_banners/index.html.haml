@@ -1,42 +1,39 @@
-- include_stylesheet 'admin/ad_banners'
+- @page_title = t('ads') + ' - ' + default_page_title
 
-%h1= t('ad_banner_index_title')
-
-%p
-  != t('ad_banner_index_instructions')
-
-%table#ad_banners.index
-  %thead
-    %tr
-      %th.name
-        = t('ad_banner_index_column.name')
-      %th.image
-        = t('ad_banner_index_column.image')
-      %th.weight
-        = t('ad_banner_index_column.weight')
-      %th.url
-        = t('ad_banner_index_column.url')
-      %th.modify
-        = t('modify')
-  %tbody
-    - if @ad_banners.empty?
+.outset
+  %table#ad_banners.index
+    %thead
       %tr
-        %td.note{ :colspan => '5' }
-          = t('ad_banner_index_none')
-    - else
-      - @ad_banners.each do |ad_banner|
-        %tr.node.level-1
-          %td.name
-            = image('ad_banners/ad')
-            = link_to(h(ad_banner.name), edit_admin_ad_banner_url(ad_banner))
-          %td.image
-            = ad_banner.asset ? image_tag(ad_banner.asset.thumbnail(:icon)) : %Q{<span class="warning">#{t('ad_banner_missing')}</span>}
-          %td.weight
-            = ad_banner.weight
-          %td.url
-            = auto_link ad_banner.link_url
-          %td.remove
-            = link_to(t('remove'), remove_admin_ad_banner_url(ad_banner))
+        %th.name
+          = t('ad_banner_index_column.name')
+        %th.image
+          = t('ad_banner_index_column.image')
+        %th.weight
+          = t('ad_banner_index_column.weight')
+        %th.url
+          = t('ad_banner_index_column.url')
+        %th.modify
+          = t('modify')
+    %tbody
+      - if @ad_banners.empty?
+        %tr
+          %td.note{ :colspan => '5' }
+            = t('ad_banner_index_none')
+      - else
+        - @ad_banners.each do |ad_banner|
+          %tr.node.level-1
+            %td.name
+              = image('ad_banners/ad')
+              = link_to(h(ad_banner.name), edit_admin_ad_banner_url(ad_banner))
+            %td.image
+              = ad_banner.asset ? image_tag(ad_banner.asset.thumbnail(:icon)) : %Q{<span class="warning">#{t('ad_banner_missing')}</span>}
+            %td.weight
+              = ad_banner.weight
+            %td.url
+              = auto_link ad_banner.link_url
+            %td.remove
+              = link_to(t('remove'), remove_admin_ad_banner_url(ad_banner))
 
-%p
-  = link_to(image('ad_banners/new-ad', :alt => t('ad_banner_action.new')), new_admin_ad_banner_url)
+#actions
+  %p
+    = link_to image('plus') + " #{t('ad_banner_action.new')}", new_admin_ad_banner_url
