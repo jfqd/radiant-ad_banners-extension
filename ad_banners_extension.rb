@@ -1,7 +1,9 @@
+require "radiant-ad_banners-extension"
+
 class AdBannersExtension < Radiant::Extension
-  version "0.9"  # Compatible with Radiant 0.9
-  description "Manage ad banners"
-  url "http://github.com/davec/radiant-ad_banners-extension"
+  version     RadiantAdBannersExtension::VERSION
+  description RadiantAdBannersExtension::DESCRIPTION
+  url         RadiantAdBannersExtension::URL
  
   def activate
     Radiant::AdminUI.send :include, AdBannersAdminUI unless defined? admin.ad_banner
