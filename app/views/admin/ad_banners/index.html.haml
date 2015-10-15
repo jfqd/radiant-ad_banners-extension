@@ -35,5 +35,6 @@
               = link_to(t('remove'), remove_admin_ad_banner_url(ad_banner))
 
 #actions
-  %p
-    = link_to image('plus') + " #{t('ad_banner_action.new')}", new_admin_ad_banner_url
+  = pagination_for @ad_banners
+  %ul
+    %li= link_to((image('plus', :alt => '') + ' ' + t('ad_banner_action.new')), new_admin_ad_banner_url)
