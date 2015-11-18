@@ -1,5 +1,5 @@
 module RadiantAdBannersExtension
-  VERSION     = "0.9.6"
+  VERSION     = "0.9.7"
   SUMMARY     = "Manage ad banners"
   DESCRIPTION = "Manage ad banners"
   URL         = "http://github.com/davec/radiant-ad_banners-extension"
