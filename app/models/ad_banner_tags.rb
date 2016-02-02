@@ -20,9 +20,13 @@ module AdBannerTags
       @selected_banners << ad_banner.id
       # The HTML is simple enough to roll by hand instead of sucking in REXML
       String.new.tap do |result|
-        result << %Q{<a href="#{ad_banner.link_url}" target="#{ad_banner.link_target}">} unless ad_banner.link_url.blank?
+        if ad_banner.link_url.present?
+          result << %Q{<a href="#{ad_banner.link_url}"}
+          result << %Q{ target="#{ad_banner.link_target}"} if ad_banner.link_target.present?
+          result << %Q{>}
+        end
         result << %Q{<img src="#{ad_banner.asset.thumbnail(:original)}" title="#{ad_banner.name}" alt="#{ad_banner.asset.caption || ad_banner.asset.title}" />}
-        result << %Q{</a>} unless ad_banner.link_url.blank?
+        result << %Q{</a>} if ad_banner.link_url.present?
       end # String.new.tap
     end # unless ad_banner.nil?
   end # tag 'ad_banner'
