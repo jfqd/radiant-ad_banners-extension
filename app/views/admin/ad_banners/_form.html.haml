@@ -22,7 +22,7 @@
                 = t('ad_banner_form.label.drag')
             - else
               = image_tag(@ad_banner.asset.thumbnail(:thumbnail))
-              = f.hidden_field :asset_id
+        = f.hidden_field :asset_id
         %p.title
           %label{:for => 'ad_banner_link_url'}
             = t('ad_banner_form.label.url')

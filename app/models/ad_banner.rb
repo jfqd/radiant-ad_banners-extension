@@ -3,8 +3,11 @@ class AdBanner < ActiveRecord::Base
 
   belongs_to :asset
 
-  validates_presence_of :name, :asset_id
-  validates_format_of :link_url, :allow_blank => true,
+  validates_presence_of :name
+  validates_presence_of :asset
+
+  validates_format_of :link_url,
+                      :allow_blank => true,
                       :with => /\Ahttps?:\/\/.+\z/,
                       :message => :invalid
 
