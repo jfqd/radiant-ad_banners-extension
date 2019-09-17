@@ -26,10 +26,10 @@ namespace :radiant do
         end
 
         unless AdBannersExtension.root.starts_with? RAILS_ROOT # don't need to copy vendored tasks
-          puts "Copying rake tasks from AdBannerExtension"
+          puts "Copying rake tasks from AdBannersExtension"
           local_tasks_path = File.join(RAILS_ROOT, %w(lib tasks))
           mkdir_p local_tasks_path, :verbose => false
-          Dir[File.join AdBannerExtension.root, %w(lib tasks *.rake)].each do |file|
+          Dir[File.join AdBannersExtension.root, %w(lib tasks *.rake)].each do |file|
             cp file, local_tasks_path, :verbose => false
           end
         end
@@ -38,7 +38,7 @@ namespace :radiant do
       desc "Syncs all available translations for this ext to the English ext master"
       task :sync => :environment do
         # The main translation root, basically where English is kept
-        language_root = AdBannerExtension.root + "/config/locales"
+        language_root = AdBannersExtension.root + "/config/locales"
         words = TranslationSupport.get_translation_keys(language_root)
 
         Dir["#{language_root}/*.yml"].each do |filename|
