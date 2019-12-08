@@ -9,6 +9,9 @@ class AdBannersExtension < Radiant::Extension
     Radiant::AdminUI.send :include, AdBannersAdminUI unless defined? admin.ad_banner
     admin.ad_banner = Radiant::AdminUI.load_default_ad_banner_regions
 
+    Radiant::Config["ad_banners.image_size.short"] ||= "300px"
+    Radiant::Config["ad_banners.image_size.wide"]  ||= "700px"
+    
     tab "Content" do
       add_item "ads", "/admin/ad_banners", :after => "Pages"
     end
