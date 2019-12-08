@@ -1,5 +1,6 @@
 - thumb_width, thumb_height = Asset.thumbnail_sizes[:thumbnail].first.split(/\D/)
 - min_weight = @ad_banner.new_record? ? 1 : 0
+- size = ( @ad_banner.format == 'wide' ? Radiant::Config["ad_banners.image_size.wide"] : Radiant::Config["ad_banners.image_size.short"] ) rescue :original
 - unless @ad_banner.new_record?
   %p
     != t('ad_banner_form.instructions.change')
@@ -21,7 +22,7 @@
               %span.note
                 = t('ad_banner_form.label.drag')
             - else
-              = image_tag(@ad_banner.asset.thumbnail(:thumbnail))
+              = image_tag(@ad_banner.asset.thumbnail(size))
         = f.hidden_field :asset_id
         %p.title
           %label{:for => 'ad_banner_link_url'}
