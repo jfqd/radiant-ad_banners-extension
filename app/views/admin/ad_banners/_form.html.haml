@@ -22,7 +22,7 @@
               %span.note
                 = t('ad_banner_form.label.drag')
             - else
-              = image_tag(@ad_banner.asset.thumbnail(size))
+              = link_to image_tag(@ad_banner.asset.thumbnail(size)), admin_asset_path(ad_banner.asset)
         = f.hidden_field :asset_id
         %p.title
           %label{:for => 'ad_banner_link_url'}
