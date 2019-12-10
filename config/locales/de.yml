@@ -10,7 +10,7 @@ de:
               invalid: 'Dies ist keine gültige URL'
   ad_banner_upload: 'Upload'
   ad_banner_bucket: 'Zwischenspeicher'
-  ad_banner_bucket_note: 'Der Zwischenspeicher bietet einen temporäre Aufbewahrung Bilder'
+  ad_banner_bucket_note: 'Fügen Sie Anzeigen-Bilder in den Dokumenten dem Zwischenspeicher hinzu'
   ad_banner_bucket_clear: 'Zwischenspeicher leeren'
   ad_banner_attach_title: 'Zur Anzeige hinzufügen'
   ad_banner_bucket_empty: 'Ihr Zwischenspeicher ist leer'
@@ -20,7 +20,7 @@ de:
   ad_banner_form:
     instructions:
       change: 'Fügen Sie der Anzeige ein Bild mit Drag und Drop hinzu'
-      disable: 'Sie können einen Anzeige temporär ausblenen, indem Sie das Gewicht auf <b>0</b> einstellen.'
+      disable: 'Sie können eine Anzeige temporär ausblenden, indem Sie das Gewicht auf <b>0</b> einstellen.'
     label:
       name: 'Anzeigen Name'
       thumbnail: 'Anzeigen Vorschau'
