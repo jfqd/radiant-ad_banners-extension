@@ -20,10 +20,6 @@
   text-decoration: underline;
 }
 
-#content #ad_banner_form_area {
-  width: 40em;
-}
-
 #content #ad_banner_form_area .title {
   margin-bottom: 1em;
 }
@@ -43,6 +39,7 @@
   border: 1px solid #ccc;
   display: block;
   padding: 3px;
+  color: #444;
 }
 #content #ad_banner_form_area #image-thumbnail .note {
   display: block;
