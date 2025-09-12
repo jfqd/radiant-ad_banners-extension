@@ -24,7 +24,7 @@ module AdBannerTags
         if ad_banner.link_url.present?
           result << %Q{<a href="#{ad_banner.link_url}"}
           result << %Q{ target="#{ad_banner.link_target}"} if ad_banner.link_target.present?
-          result << %Q{ title="#{tag.attr[:title]}"} if tag.attr[:title].present?
+          result << %Q{ title="#{tag.attr['title']}"} if tag.attr['title'].present?
           result << %Q{>}
         end
         result << %Q{<img src="#{ad_banner.asset.thumbnail(size)}" title="#{ad_banner.name}" alt="#{ad_banner.asset.caption.present? ? ad_banner.asset.caption : ad_banner.asset.title}" />}
