@@ -12,6 +12,9 @@ class AdBannersExtension < Radiant::Extension
     Radiant::Config["ad_banners.image_size.short"] ||= "300px"
     Radiant::Config["ad_banners.image_size.wide"]  ||= "700px"
     
+    Radiant::Config["ad_banners.image_size.short_srcset"] ||= "2x:700px"
+    Radiant::Config["ad_banners.image_size.wide_srcset"]  ||= "2x:original"
+    
     tab "Content" do
       add_item "ads", "/admin/ad_banners", :after => "Pages"
     end
